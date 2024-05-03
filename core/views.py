@@ -48,7 +48,7 @@ def search_view(request):
         if max_price:
             cars = cars.filter(price__gte=min_price, price__lte=max_price)
 
-    dict = {
+    context = {
         'models': models,
         'cities': cities,
         'years': years,
@@ -57,4 +57,4 @@ def search_view(request):
         'members': members,
     }
 
-    return render(request, 'pages/search.html', dict)
+    return render(request, 'pages/search.html', context)

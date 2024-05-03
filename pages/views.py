@@ -12,7 +12,7 @@ def home_view(request):
     cars = Car.objects.order_by('-created_date')[:6:1]
     members = Member.objects.all()
 
-    dict = {
+    context = {
         'models': models,
         'cities': cities,
         'years': years,
@@ -21,7 +21,7 @@ def home_view(request):
         'members': members,
     }
 
-    return render(request, 'pages/home.html', dict)
+    return render(request, 'pages/home.html', context)
 
 def about_view(request):
     members = Member.objects.all()
