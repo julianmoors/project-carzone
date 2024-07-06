@@ -2,6 +2,7 @@ from django.shortcuts import render
 from cars.models import Car
 from pages.models import Member
 
+
 def search_view(request):
     models = Car.objects.values_list('title', flat=True).distinct()
     cities = Car.objects.values_list('city', flat=True).distinct()

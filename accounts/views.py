@@ -4,6 +4,7 @@ from django.contrib import messages, auth
 from django.contrib.auth.decorators import login_required
 from cars.models import Car
 
+
 def register_view(request):
     if request.method == 'POST':
         firstname = request.POST['firstname']

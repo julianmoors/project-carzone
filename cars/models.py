@@ -2,6 +2,7 @@ from django.db import models
 from datetime import datetime
 from django_ckeditor_5.fields import CKEditor5Field
 
+
 class Car(models.Model):
     state_choices = (
         ('AL', 'Alabama'),
