@@ -59,7 +59,7 @@ class CarAdmin(admin.ModelAdmin):
     )
 
     def thumbnail(self, object):
-        return format_html('<img src="{}" width="40" style="border-radius: 50%">'.format(object.car_photo_1.url))
+        return format_html('<img src="{}" width="40">'.format(object.car_photo_1.url))
 
     search_fields = ('title', 'model', 'city', 'state')
     thumbnail.short_description = 'Photo'
