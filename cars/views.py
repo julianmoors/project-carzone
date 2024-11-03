@@ -3,7 +3,6 @@ from django.core.paginator import Paginator
 from pages.models import Member
 from . models import Car
 
-
 def cars_view(request):
     cars = Car.objects.all()
     paginator = Paginator(cars, 6)
